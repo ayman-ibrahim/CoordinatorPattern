@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Storyboarded {
 
     let remoteContext = RemoteContext()
     let resource = Resource<[Article]>(endPoint: Endpoint(path: "/posts", queryItems: []), method: HTTPMethod.get) { data in
