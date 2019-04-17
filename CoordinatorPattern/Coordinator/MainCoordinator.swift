@@ -20,9 +20,14 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = ViewController.inistaniate(storyboard: .Main)
+        let vc = PostsVC.inistaniate(storyboard: .Main)
+        vc.coordinator = self
         navigationController.setViewControllers([vc], animated: true)
     }
     
-    
+    func showPostDetails() {
+        let vc = PostDetailsVC.inistaniate(storyboard: .Main)
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
