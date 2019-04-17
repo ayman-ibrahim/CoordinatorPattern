@@ -1,5 +1,7 @@
 # Coordinator Pattern
 
+Thanks to [Paul Hudson](https://www.youtube.com/watch?v=7HgbcTqxoN4)
+
 ### Problem:
 
 > UIViewController: 
