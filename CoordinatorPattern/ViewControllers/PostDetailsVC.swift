@@ -16,8 +16,8 @@ class PostDetailsVC: UIViewController, Storyboarded {
         super.viewDidLoad()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        coordinator?.didFinishDisplayingDetails()//note this is indictor that the VC finsihed it's task, it could be called in any other action
-    }
+//    override func viewDidDisappear(_ animated: Bool) {
+//        super.viewDidDisappear(animated)
+//        coordinator?.didFinishDisplayingDetails()//note this is indictor that the VC finsihed it's task, it could be called in any other action
+//    }
 }

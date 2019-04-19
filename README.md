@@ -37,7 +37,9 @@ The MVC pattern relies on stuffing the viewController with much functionalities 
 avoid massive coordinators 
 
 
-2- navigate backword 
+2- navigate backword
+what happens if U have multiple viewControllers being shown in the child Coordinator (some other view presented modally) ... viewDidDispear will be called prematurely 
+
 3- passing data between coordinators 
 4- coordinated tab bar controller 
 5- handling segues 
