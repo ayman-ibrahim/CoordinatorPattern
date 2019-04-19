@@ -23,6 +23,8 @@
 		FD7EBC2E2267CB8C0093147A /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7EBC2D2267CB8C0093147A /* PostsVC.swift */; };
 		FD7EBC302267CB9B0093147A /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7EBC2F2267CB9B0093147A /* PostDetailsVC.swift */; };
 		FDB252662269A27A0071B83A /* PostDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB252652269A27A0071B83A /* PostDetailsCoordinator.swift */; };
+		FDB2526A2269E93F0071B83A /* PostHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB252692269E93F0071B83A /* PostHistoryVC.swift */; };
+		FDB2526C2269EA830071B83A /* PostHistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2526B2269EA830071B83A /* PostHistoryCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		FD7EBC2D2267CB8C0093147A /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		FD7EBC2F2267CB9B0093147A /* PostDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
 		FDB252652269A27A0071B83A /* PostDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsCoordinator.swift; sourceTree = "<group>"; };
+		FDB252692269E93F0071B83A /* PostHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHistoryVC.swift; sourceTree = "<group>"; };
+		FDB2526B2269EA830071B83A /* PostHistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHistoryCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 				FD7EBC282267C8A40093147A /* Coordinator.swift */,
 				FD7EBC262267C88F0093147A /* MainCoordinator.swift */,
 				FDB252652269A27A0071B83A /* PostDetailsCoordinator.swift */,
+				FDB2526B2269EA830071B83A /* PostHistoryCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			children = (
 				FD7EBC2D2267CB8C0093147A /* PostsVC.swift */,
 				FD7EBC2F2267CB9B0093147A /* PostDetailsVC.swift */,
+				FDB252692269E93F0071B83A /* PostHistoryVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -318,10 +324,12 @@
 				FD7EBC292267C8A40093147A /* Coordinator.swift in Sources */,
 				FD7EBC302267CB9B0093147A /* PostDetailsVC.swift in Sources */,
 				1024672C22634AAB00F97105 /* Article.swift in Sources */,
+				FDB2526A2269E93F0071B83A /* PostHistoryVC.swift in Sources */,
 				FDB252662269A27A0071B83A /* PostDetailsCoordinator.swift in Sources */,
 				FD7EBC2E2267CB8C0093147A /* PostsVC.swift in Sources */,
 				FD7EBC272267C88F0093147A /* MainCoordinator.swift in Sources */,
 				102466FA226347FA00F97105 /* ViewController.swift in Sources */,
+				FDB2526C2269EA830071B83A /* PostHistoryCoordinator.swift in Sources */,
 				102466F8226347FA00F97105 /* AppDelegate.swift in Sources */,
 				102467292263487C00F97105 /* EndPoint.swift in Sources */,
 				102467272263483500F97105 /* RemoteContext.swift in Sources */,

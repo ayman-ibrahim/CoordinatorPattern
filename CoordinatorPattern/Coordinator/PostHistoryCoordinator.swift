@@ -1,5 +1,5 @@
 //
-//  PostDetailsCoordinator.swift
+//  PostHistoryCoordinator.swift
 //  CoordinatorPattern
 //
 //  Created by Ayman Ibrahim on 4/19/19.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PostDetailsCoordinator: Coordinator, PostHistory {
+
+class PostHistoryCoordinator: Coordinator {
     
     weak var parentCoordinator: Coordinator?
     var childCoordinators =  [Coordinator]()
@@ -20,22 +21,12 @@ class PostDetailsCoordinator: Coordinator, PostHistory {
     }
     
     func start() {
-        let vc = PostDetailsVC.inistaniate(storyboard: .Main)
+        let vc = PostHistoryVC.inistaniate(storyboard: .Main)
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func didFinishDisplayingDetails() {
+    func didFinishDisplayingHistory() {
         parentCoordinator?.childDidFinish(child: self)
-    }
-}
-
-//MARK: - PostHistory -
-extension PostDetailsCoordinator {
-    func showPostHistory() {
-        let postHistoyCoordinator = PostHistoryCoordinator(navigationController: self.navigationController)
-        childCoordinators.append(postHistoyCoordinator)
-        postHistoyCoordinator.parentCoordinator = self
-        postHistoyCoordinator.start()
     }
 }

@@ -32,15 +32,13 @@ The MVC pattern relies on stuffing the viewController with much functionalities 
 3- connect the viewController to the coordinator, ViewController shall no more be responsible for creating other viewControllers and presenting it, remove tight coupling.
 
 
-///
+###
 1- how and when use child coordinators 
 avoid massive coordinators 
-
 
 2- navigate backword
 what happens if U have multiple viewControllers being shown in the child Coordinator (some other view presented modally) ... viewDidDispear will be called prematurely 
 
-3- passing data between coordinators 
-4- coordinated tab bar controller 
-5- handling segues 
-6- protocols and closures 
+3- passing data between coordinators
+Key is one ViewController does not know that other exisit, passing data to the coordinator then can go any where(triger a network request or open another view), the coordinator figures out the destination it decide what the values should mean
+ 

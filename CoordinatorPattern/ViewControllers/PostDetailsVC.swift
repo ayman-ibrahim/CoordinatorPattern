@@ -16,6 +16,14 @@ class PostDetailsVC: UIViewController, Storyboarded {
         super.viewDidLoad()
     }
     
+    deinit {
+        print("deinit PostsVC")
+    }
+    
+    @IBAction func showPostHistory(_ sender: Any) {
+        coordinator?.showPostHistory()
+    }
+    
 //    override func viewDidDisappear(_ animated: Bool) {
 //        super.viewDidDisappear(animated)
 //        coordinator?.didFinishDisplayingDetails()//note this is indictor that the VC finsihed it's task, it could be called in any other action

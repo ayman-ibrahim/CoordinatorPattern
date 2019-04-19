@@ -18,18 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aux-Sm-P4F">
-                                <rect key="frame" x="172" y="318.5" width="31" height="30"/>
-                                <state key="normal" title="Post"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7r-Ej-3Ky">
+                                <rect key="frame" x="166.5" y="318.5" width="42" height="30"/>
+                                <state key="normal" title="Post 1"/>
                                 <connections>
-                                    <action selector="showPostDetails:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ly7-pp-AeQ"/>
+                                    <action selector="showPostDetails:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m4S-BQ-K7M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aux-Sm-P4F">
+                                <rect key="frame" x="165.5" y="364.5" width="44" height="30"/>
+                                <state key="normal" title="Post 2"/>
+                                <connections>
+                                    <action selector="showPostDetails2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JL1-Fk-d2Y"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="aux-Sm-P4F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f8c-77-45n"/>
-                            <constraint firstItem="aux-Sm-P4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xXd-NE-5BF"/>
+                            <constraint firstItem="aux-Sm-P4F" firstAttribute="top" secondItem="n7r-Ej-3Ky" secondAttribute="bottom" constant="16" id="ROk-S8-roI"/>
+                            <constraint firstItem="aux-Sm-P4F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g99-jf-jdN"/>
+                            <constraint firstItem="n7r-Ej-3Ky" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="n8b-4C-dDO"/>
+                            <constraint firstItem="n7r-Ej-3Ky" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sWm-IT-9B5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -60,10 +69,35 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MGA-Sc-ZSo"/>
                     </view>
+                    <navigationItem key="navigationItem" id="EM5-n7-UR3">
+                        <barButtonItem key="rightBarButtonItem" title="Item History" id="fXG-zF-hF8">
+                            <connections>
+                                <action selector="showPostHistory:" destination="n5S-Sn-KrN" id="Sr3-Dl-biK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LW8-qT-GWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2402" y="87"/>
+            <point key="canvasLocation" x="2394" y="89"/>
+        </scene>
+        <!--Post History-->
+        <scene sceneID="gps-Rr-27U">
+            <objects>
+                <viewController storyboardIdentifier="PostHistoryVC" id="IC6-Ib-keU" customClass="PostHistoryVC" customModule="CoordinatorPattern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uEy-ut-mcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cIV-CA-g1p"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Post History" id="MNt-lS-ptT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xuj-Pz-h1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3209" y="94"/>
         </scene>
     </scenes>
 </document>

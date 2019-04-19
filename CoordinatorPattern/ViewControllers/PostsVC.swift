@@ -10,7 +10,7 @@ import UIKit
 
 class PostsVC: UIViewController, Storyboarded {
 
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: (PostDetails)?
     
     let remoteContext = RemoteContext()
     let resource = Resource<[Article]>(endPoint: Endpoint(path: "/posts", queryItems: []), method: HTTPMethod.get) { data in
@@ -29,10 +29,16 @@ class PostsVC: UIViewController, Storyboarded {
         }
     }
     
-    
     @IBAction func showPostDetails(_ sender: Any) {
-        coordinator?.showPostDetails()
+        coordinator?.showPostDetails(id: 1)
     }
     
+    @IBAction func showPostDetails2(_ sender: Any) {
+        coordinator?.showPostDetails(id: 2)
+    }
+    
+    deinit {
+        print("deinit PostsVC")
+    }
 
 }

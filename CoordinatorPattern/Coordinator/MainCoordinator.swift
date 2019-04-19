@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MainCoordinator: NSObject, Coordinator {
+class MainCoordinator: NSObject, Coordinator, PostDetails {
     
     var childCoordinators =  [Coordinator]()
     var navigationController: UINavigationController
@@ -26,19 +26,13 @@ class MainCoordinator: NSObject, Coordinator {
         navigationController.setViewControllers([vc], animated: true)
     }
     
-    func showPostDetails() {
+    //MARK: - Navigation -
+    func showPostDetails(id: Int) {
         let child = PostDetailsCoordinator(navigationController: self.navigationController)
+        print(id)
+        child.parentCoordinator = self
         childCoordinators.append(child)
         child.start()
-    }
-    
-    func childDidFinish(child: Coordinator) {
-        for (inedx, coordinator) in childCoordinators.enumerated() {
-            if coordinator === child {
-                childCoordinators.remove(at: inedx)
-                break
-            }
-        }
     }
 }
 
@@ -51,8 +45,11 @@ extension MainCoordinator: UINavigationControllerDelegate {
         if navigationController.viewControllers.contains(fromVC) {
             return
         }
+        
         if let vc = fromVC as? PostDetailsVC {
             vc.coordinator?.didFinishDisplayingDetails()
+        } else if let vc = fromVC as? PostHistoryVC {
+            vc.coordinator?.didFinishDisplayingHistory()
         }
     }
 }
