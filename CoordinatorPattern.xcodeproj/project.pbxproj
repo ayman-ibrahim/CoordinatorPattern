@@ -22,6 +22,7 @@
 		FD7EBC292267C8A40093147A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7EBC282267C8A40093147A /* Coordinator.swift */; };
 		FD7EBC2E2267CB8C0093147A /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7EBC2D2267CB8C0093147A /* PostsVC.swift */; };
 		FD7EBC302267CB9B0093147A /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7EBC2F2267CB9B0093147A /* PostDetailsVC.swift */; };
+		FDB252662269A27A0071B83A /* PostDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB252652269A27A0071B83A /* PostDetailsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		FD7EBC282267C8A40093147A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FD7EBC2D2267CB8C0093147A /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		FD7EBC2F2267CB9B0093147A /* PostDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
+		FDB252652269A27A0071B83A /* PostDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				FD7EBC242267C4C60093147A /* Storyboarded.swift */,
-				FD7EBC262267C88F0093147A /* MainCoordinator.swift */,
 				FD7EBC282267C8A40093147A /* Coordinator.swift */,
+				FD7EBC262267C88F0093147A /* MainCoordinator.swift */,
+				FDB252652269A27A0071B83A /* PostDetailsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				FD7EBC292267C8A40093147A /* Coordinator.swift in Sources */,
 				FD7EBC302267CB9B0093147A /* PostDetailsVC.swift in Sources */,
 				1024672C22634AAB00F97105 /* Article.swift in Sources */,
+				FDB252662269A27A0071B83A /* PostDetailsCoordinator.swift in Sources */,
 				FD7EBC2E2267CB8C0093147A /* PostsVC.swift in Sources */,
 				FD7EBC272267C88F0093147A /* MainCoordinator.swift in Sources */,
 				102466FA226347FA00F97105 /* ViewController.swift in Sources */,

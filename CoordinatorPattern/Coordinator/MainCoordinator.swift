@@ -26,8 +26,17 @@ class MainCoordinator: Coordinator {
     }
     
     func showPostDetails() {
-        let vc = PostDetailsVC.inistaniate(storyboard: .Main)
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: true)
+        let child = PostDetailsCoordinator(navigationController: self.navigationController)
+        childCoordinators.append(child)
+        child.start()
+    }
+    
+    func childDidFinish(child: Coordinator) {
+        for (inedx, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: inedx)
+                break
+            }
+        }
     }
 }
